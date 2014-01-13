@@ -9,8 +9,6 @@ namespace SalesTax
     {
         BOOK,
         FOOD,
-        MEDICAL,
-        MUSIC,
-        PERFUME
+        MEDICAL
     }
 }

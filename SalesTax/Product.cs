@@ -35,5 +35,12 @@ namespace SalesTax
             return region == ProductRegion.IMPORTED;
         }
 
+        public Boolean isExempt()
+        {
+            if ((type == ProductType.FOOD) || (type == ProductType.BOOK) || (type == ProductType.MEDICAL))
+                return true;
+            else
+                return false;
+        }
     }
 }
