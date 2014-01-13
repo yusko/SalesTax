@@ -7,16 +7,33 @@ namespace SalesTax
 {
     class Product
     {
-        public enum ProductType
+        public string name { get; private set; }
+        public ProductType type { get; private set; }
+        public ProductRegion region { get; private set; }
+        public decimal price { get; private set; }
+
+        public Product(string name, ProductType type, ProductRegion region, decimal price)
         {
-            BOOK,
-            MEDICAL,
-            FOOD
+            this.name = name;
+            this.type = type;
+            this.region = region;
+            this.price = price;
         }
 
-        public string name { get; set; }
-        public decimal price { get; set; }
-        public bool localtax { get; set; }
-        public bool imported { get; set; }
+        public ProductType getType()
+        {
+            return type;
+        }
+
+        public decimal getPrice()
+        {
+            return price;
+        }
+
+        public Boolean isImported()
+        {
+            return region == ProductRegion.IMPORTED;
+        }
+
     }
 }
