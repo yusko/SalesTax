@@ -8,39 +8,27 @@ namespace SalesTax
     class Product
     {
         public string name { get; private set; }
-        public ProductType type { get; private set; }
-        public ProductRegion region { get; private set; }
-        public decimal price { get; private set; }
+        public float price { get; private set; }
+        public bool isTaxable { get; private set; }
+        public bool isImported { get; private set; }
 
-        public Product(string name, ProductType type, ProductRegion region, decimal price)
+        public Product(string name, float price, bool isTaxable, bool isImported)
         {
             this.name = name;
-            this.type = type;
-            this.region = region;
             this.price = price;
+            this.isTaxable = isTaxable;
+            this.isImported = isImported;
         }
 
-        public ProductType getType()
+
+        public float getPrice
         {
-            return type;
+            get {return price;}
         }
 
-        public decimal getPrice()
+        public float taxesOnProduct(int quanity)
         {
-            return price;
-        }
-
-        public Boolean isImported()
-        {
-            return region == ProductRegion.IMPORTED;
-        }
-
-        public Boolean isExempt()
-        {
-            if ((type == ProductType.FOOD) || (type == ProductType.BOOK) || (type == ProductType.MEDICAL))
-                return true;
-            else
-                return false;
+            return Taxes.calculateSalesTax(quanity * price, isTaxable, isImported);
         }
     }
 }
