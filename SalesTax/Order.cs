@@ -2,23 +2,39 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Collections;
 
 namespace SalesTax
 {
     class Order
     {
-        int quanity;
-        Product product;
+        /*  a list to store the product */
+        private List<Product> orderList;
 
-        public Order(int quanity, Product product)
+        /* 
+         *  instantiates a new order to which product can be added
+         */
+        public Order()
         {
-            this.quanity = quanity;
-            this.product = product;
+            orderList = new List<Product>();
         }
 
-        public float qntyPrice
+        /*  
+         *  adds the product
+         *  param product - the product to be added to the order
+         */
+        public void addOrder(Product product)
         {
-            get { return product.getPrice * quanity; }
+            orderList.Add(product);
+        }
+
+        /*  
+         *  retrieves the item from order
+         *  @return a list containing product
+         */
+        public List<Product> getOrder()
+        {
+            return orderList;
         }
     }
 }

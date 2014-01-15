@@ -9,6 +9,7 @@ namespace SalesTax
     {
         public string name { get; private set; }
         public float price { get; private set; }
+        public int quanity { get; private set; }
         public bool isTaxable { get; private set; }
         public bool isImported { get; private set; }
 
@@ -16,15 +17,11 @@ namespace SalesTax
         {
             this.name = name;
             this.price = price;
+            this.quanity = quanity;
             this.isTaxable = isTaxable;
             this.isImported = isImported;
         }
 
-
-        public float getPrice
-        {
-            get {return price;}
-        }
 
         public float taxesOnProduct(int quanity)
         {
