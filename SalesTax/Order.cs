@@ -32,9 +32,20 @@ namespace SalesTax
          *  retrieves the item from order
          *  @return a list containing product
          */
-        public List<Product> getOrder()
+        public void printOrder()
         {
-            return orderList;
+            double totalTax = 0;
+            double netTotal = 0;
+            foreach(var product in orderList)
+            {
+                double tax = product.taxesOnProduct(product.quanity);
+                Console.WriteLine(product.quanity + " " + product.name + " : " + product.price);
+                totalTax += tax;
+               // netTotal += product.price + tax;
+            }
+            Console.WriteLine("Total Tax : {0}", Math.Ceiling(totalTax / 0.005) * 0.005);
+            Console.WriteLine("Total : " + (int)netTotal + (int)Math.Round((netTotal* 0.05)/5) * 5);
         }
+
     }
 }

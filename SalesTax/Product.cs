@@ -8,12 +8,12 @@ namespace SalesTax
     class Product
     {
         public string name { get; private set; }
-        public float price { get; private set; }
+        public double price { get; private set; }
         public int quanity { get; private set; }
         public bool isTaxable { get; private set; }
         public bool isImported { get; private set; }
 
-        public Product(string name, float price, bool isTaxable, bool isImported)
+        public Product(string name, double price, int quanity, bool isTaxable, bool isImported)
         {
             this.name = name;
             this.price = price;
@@ -23,9 +23,11 @@ namespace SalesTax
         }
 
 
-        public float taxesOnProduct(int quanity)
+        public double taxesOnProduct(int quanity)
         {
-            return Taxes.calculateSalesTax(quanity * price, isTaxable, isImported);
+            double amount = quanity * price;
+            Console.WriteLine("amount: {0} ", amount);
+            return Taxes.calculateSalesTax(amount, isTaxable, isImported);
         }
     }
 }
