@@ -10,7 +10,7 @@ using System.Text;
  */
 namespace SalesTax
 {
-    class Product
+    public class Product
     {
         /** name of product */
         public string name { get; private set; }

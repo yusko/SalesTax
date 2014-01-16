@@ -8,20 +8,13 @@ using NUnit.Framework;
 namespace SalesTax
 {
     [TestFixture]
-    public class TestSalesTax
+    public class TestNunitSalesTax
     {
         Product pTest;
-
-        [SetUp]
-        public void init()
-        {
-            //All initalizations
-            pTest = new Product("Soda", 12.99, 1, false, false);
-        }
         [Test]
         public void isProductEqual()
         {
-
+            
         }
     }
 }
