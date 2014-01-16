@@ -6,6 +6,11 @@ using System.Collections;
 
 namespace SalesTax
 {
+    /**
+     * the order holds the product purchased and prints the recipt.
+     * 
+     */ 
+
     class Order
     {
         /*  a list to store the product */
@@ -34,17 +39,23 @@ namespace SalesTax
          */
         public void printOrder()
         {
+            /** initializes the values for total tax and net total */
             double totalTax = 0;
             double netTotal = 0;
             foreach(var product in orderList)
             {
+                // gets the tax based on product quanity 
                 double tax = product.taxesOnProduct(product.quanity);
-                Console.WriteLine(product.quanity + " " + product.name + " : " + product.price);
+                Console.WriteLine("{0} {1} : {2:N2}", product.quanity, product.name, product.price + tax);
+                // tallys the total tax amount
                 totalTax += tax;
-               // netTotal += product.price + tax;
+                // tallys the total cost
+                netTotal = netTotal + (product.price * product.quanity);
             }
-            Console.WriteLine("Total Tax : {0}", Math.Ceiling(totalTax / 0.005) * 0.005);
-            Console.WriteLine("Total : " + (int)netTotal + (int)Math.Round((netTotal* 0.05)/5) * 5);
+            // sums the total net amount and tax amount
+            netTotal = netTotal + totalTax;
+            Console.WriteLine("Sales Taxes: {0:N2}", totalTax);
+            Console.WriteLine("Total: {0:N2}", netTotal);
         }
 
     }
