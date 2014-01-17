@@ -11,7 +11,7 @@ namespace SalesTax
      * 
      */ 
 
-    class Order
+    public class Order
     {
         /*  a list to store the product */
         private List<Product> orderList;
@@ -57,6 +57,16 @@ namespace SalesTax
             Console.WriteLine("Sales Taxes: {0:N2}", totalTax);
             Console.WriteLine("Total: {0:N2}", netTotal);
         }
+        
+        /*
+         * retrieve the number of prodcut in our order
+         * @return prodcut count
+         *
+         */ 
 
+        public int getOrderSize()
+        {
+            return orderList.Count();
+        }
     }
 }

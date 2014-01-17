@@ -1,18 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\yusko.ULS\Documents\GitHub\SalesTax\TestingNunitSalesTax\TestingNunitSalesTax.nunit" total="2" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-01-16" time="17:16:44">
+<test-results name="C:\Users\yusko.ULS\Documents\GitHub\SalesTax\TestingNunitSalesTax\TestingNunitSalesTax.nunit" total="4" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-01-17" time="09:28:21">
   <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.6407" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="FEMSHEP" user="yusko" user-domain="ULS" />
   <culture-info current-culture="en-US" current-uiculture="en-US" />
-  <test-suite type="Project" name="C:\Users\yusko.ULS\Documents\GitHub\SalesTax\TestingNunitSalesTax\TestingNunitSalesTax.nunit" executed="True" result="Success" success="True" time="0.079" asserts="0">
+  <test-suite type="Project" name="C:\Users\yusko.ULS\Documents\GitHub\SalesTax\TestingNunitSalesTax\TestingNunitSalesTax.nunit" executed="True" result="Success" success="True" time="0.014" asserts="0">
     <results>
-      <test-suite type="Assembly" name="C:\Users\yusko.ULS\Documents\GitHub\SalesTax\TestingNunitSalesTax\bin\Debug\TestingNunitSalesTax.dll" executed="True" result="Success" success="True" time="0.061" asserts="0">
+      <test-suite type="Assembly" name="C:\Users\yusko.ULS\Documents\GitHub\SalesTax\TestingNunitSalesTax\bin\Debug\TestingNunitSalesTax.dll" executed="True" result="Success" success="True" time="0.013" asserts="0">
         <results>
-          <test-suite type="Namespace" name="SalesTax" executed="True" result="Success" success="True" time="0.060" asserts="0">
+          <test-suite type="Namespace" name="SalesTax" executed="True" result="Success" success="True" time="0.013" asserts="0">
             <results>
-              <test-suite type="TestFixture" name="TestNunitSalesTax" executed="True" result="Success" success="True" time="0.058" asserts="0">
+              <test-suite type="TestFixture" name="TestNunitSalesTax" executed="True" result="Success" success="True" time="0.013" asserts="0">
                 <results>
-                  <test-case name="SalesTax.TestNunitSalesTax.isProductEqual" executed="True" result="Success" success="True" time="0.031" asserts="1" />
-                  <test-case name="SalesTax.TestNunitSalesTax.ProductNotEqual" executed="True" result="Success" success="True" time="0.009" asserts="1" />
+                  <test-case name="SalesTax.TestNunitSalesTax.isProductEqual" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                  <test-case name="SalesTax.TestNunitSalesTax.ProductNotEqual" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                  <test-case name="SalesTax.TestNunitSalesTax.testForImportedProucts" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                  <test-case name="SalesTax.TestNunitSalesTax.testForNonImportedProducts" executed="True" result="Success" success="True" time="0.000" asserts="3" />
                 </results>
               </test-suite>
             </results>

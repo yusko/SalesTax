@@ -9,7 +9,7 @@ namespace SalesTax
      * Taxes class which will handle all tax related methods.
      */
 
-    class Taxes
+    public class Taxes
     {
         /*
          * static read only value for local tax and import tax
